@@ -30,6 +30,16 @@ use pbc_traits::ReadWriteState;
 use read_write_rpc_derive::ReadWriteRPC;
 use read_write_state_derive::ReadWriteState;
 
+
+#![allow(unused_variables)]
+
+pub enum TradingPair {
+    
+}
+
 /// This contract's state
 #[state]
 struct ContractState {}
+
+#[action]
+pub fn 
