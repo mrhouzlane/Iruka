@@ -1,0 +1,41 @@
+[package]
+name = "secret-voting"
+version = "0.1.4"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+abi = ["pbc_contract_common/abi", "pbc_contract_codegen/abi", "pbc_traits/abi", "create_type_spec_derive/abi", "pbc_lib/abi"]
+attestation = []
+default = ["attestation"]
+
+
+[lib]
+path = "src/contract.rs"
+crate-type = ['cdylib']
+
+
+[package.metadata.zk]
+zk-compute-path = "src/zk_compute.rs"
+
+[package.metadata.zkcompiler]
+download_method = "http"
+repositoryId = "secata"
+repositoryUrl = "https://gitlab.com/api/v4/projects/37549006/packages/maven"
+groupId = "com.partisiablockchain.language"
+artifactId = "zkcompiler"
+version = "3.0.18"
+
+
+[dependencies]
+pbc_contract_common = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", features = ["zk"], tag = "9.1.2" }
+pbc_traits = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "9.1.2" }
+pbc_lib = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "9.1.2" }
+read_write_rpc_derive = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "9.1.2" }
+read_write_state_derive = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "9.1.2" }
+create_type_spec_derive = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "9.1.2" }
+pbc_contract_codegen = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", features = ["zk"], tag = "9.1.2" }
+pbc_zk = { git = "https://git@gitlab.com/partisiablockchain/language/contract-sdk.git", tag = "9.1.2" }
+
+serde_json = "1.0"

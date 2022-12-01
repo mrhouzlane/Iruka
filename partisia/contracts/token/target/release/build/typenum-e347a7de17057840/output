@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/mehdirhouzlane/shoko/partisia/contracts/token/target/release/build/typenum-e347a7de17057840/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/Users/mehdirhouzlane/shoko/partisia/contracts/token/target/release/build/typenum-e347a7de17057840/out/op.rs
