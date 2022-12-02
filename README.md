@@ -1,6 +1,6 @@
-# Shoko
+# Iruka
 
- 🏛 ------------Shoko is a private orderbook exchange using Partisian Blockchain MPC------------ 🏛
+ 🏛 ------------Iruka is a private orderbook exchange using Partisian Blockchain MPC------------ 🏛
  
 ## Getting Started
 
