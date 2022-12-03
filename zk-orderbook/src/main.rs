@@ -30,16 +30,37 @@ use pbc_traits::ReadWriteState;
 use read_write_rpc_derive::ReadWriteRPC;
 use read_write_state_derive::ReadWriteState;
 
+/// The maximum size of MPC variables.
+const BITLENGTH_OF_SECRET_VOTE_VARIABLES: u32 = 32;
 
-#![allow(unused_variables)]
-
-pub enum TradingPair {
-    
+#[derive(Debug)]
+enum BidOrAsk {
+    Bid,
+    Ask,
 }
 
-/// This contract's state
-#[state]
-struct ContractState {}
+/// Defintion of the orderbook
+#[derive(ReadWriteRPC, ReadWriteState, CreateTypeSpec, Clone)]
+struct Orderbook {
+    asks: HashMap<Price, Limit>,
+    bids: HashMap<Price, Limit>,
+}
 
-#[action]
-pub fn 
+struct Order {
+    size: f64,
+    bid_or_ask: BidOrAsk,
+}
+
+struct User {
+    user_id: u64,
+    matching_status: bool,
+}
+
+/// Defintion of a Zk-Order
+#[derive(ReadWriteRPC, ReadWriteState, CreateTypeSpec, Clone)]
+struct ZKOrder {
+    order: HashMap<Order, User>,
+}
+
+#[derive(ReadWriteState, CreateTypeSpec, Clone)]
+struct MatchingEngine {}
