@@ -10,7 +10,7 @@
 
 ## Architecture 
 
-![PoPV](./docs/ZK-structure.png)
+![PoPV](./docs/ZK-Structure.png)
 
 
 
