@@ -10,6 +10,9 @@
 
 ## Architecture 
 
+![PoPV](./docs/ZK-structure.png)
+
+
 
 ## Deployment 
 
