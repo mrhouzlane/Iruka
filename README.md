@@ -1,6 +1,6 @@
 # Iruka
 
- 🏛 ------------Iruka is a private orderbook exchange using Partisian Blockchain MPC------------ 🏛
+ 🏛 Private Orderbook-based DEX powered by MPC technology of Partisia Blockchain. 
  
 ## Getting Started
 
