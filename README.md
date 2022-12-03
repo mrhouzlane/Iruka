@@ -15,6 +15,7 @@
 ## Architecture 
 
 ![PoPV](./docs/Zk-art.png)
+![Pitch Deck](./docs/IRUKA.pdf)
 
 
 
